@@ -1,0 +1,535 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Custom Scroll */
+::-webkit-scrollbar {
+  width: 30px;
+}
+::-webkit-scrollbar-track {
+  background: #393939;
+}
+::-webkit-scrollbar-thumb {
+  background: #858585;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555255;
+}
+
+/* Content */
+section {
+  padding: 100px 0;
+}
+.max-width {
+  max-width: 1300px;
+  padding: 0 70px;
+  margin: auto;
+}
+.about,
+.education,
+.projects,
+.experience,
+.skills,
+.hobbies,
+.contact {
+  font-family: "Open Sans", sans-serif;
+}
+.education,
+.experience,
+.hobbies {
+  color: white;
+  background: black;
+}
+.about .about-content,
+.contact .contact-content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-self: center;
+}
+section .title {
+  position: relative;
+  margin-bottom: 70px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  white-space: initial;
+}
+section .title::after {
+  color: peru;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 22px;
+  padding: 0 6px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.hobbies .hobbies-content .topbar,
+.projects .projects-content .topbar {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 35px;
+  font-family: "Open Sans";
+  transition: 0.5s;
+  z-index: 10;
+}
+.navbar.sticky {
+  padding: 15px;
+  background: black;
+}
+.navbar .max-width {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  color: white;
+  font-size: 32px;
+  font-weight: 900;
+}
+.navbar .logo a span {
+  color: peru;
+  transition: 0.5s;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  display: block;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 26px;
+  transition: color 0.5s;
+}
+.navbar .menu li a:hover {
+  color: peru;
+}
+.navbar.sticky .menu li a:hover {
+  color: white;
+}
+
+/* Menu Button */
+.menu-btn {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+.scroll-up-btn {
+  position: fixed;
+  color: white;
+  height: 49px;
+  width: 50px;
+  right: 10px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 50px;
+  background: peru;
+  font-size: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 10;
+}
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 10;
+  pointer-events: auto;
+}
+.scroll-up-btn:hover {
+  color: black;
+}
+
+/* Home */
+.home {
+  display: flex;
+  background: url("../img/img2.jpg");
+  height: 100vh;
+  color: white;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Open Sans";
+}
+.home .max-width {
+  text-align: center;
+}
+.home .home-content .text-1 {
+  font-size: 45px;
+}
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 700;
+}
+.home .home-content .text-3 {
+  font-size: 40px;
+}
+.home .home-content .text-3 span {
+  color: peru;
+  font-weight: 600;
+}
+.home .home-content a {
+  display: inline-block;
+  background: peru;
+  color: white;
+  font-size: 30px;
+  padding: 15px 20px;
+  margin-top: 20px;
+  font-weight: 900;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.home .home-content a:hover {
+  color: black;
+  background: peru;
+}
+
+/* Titles */
+.title::after {
+  margin-bottom: -30px;
+  font-weight: 800;
+}
+
+/* About */
+.about .title::after {
+  content: "Learn More About Me";
+  font-size: 24px;
+}
+.about .about-content .new {
+  width: 70%;
+}
+.about .about-content .new .text {
+  font-size: 25px;
+  font-weight: 600;
+}
+.about .about-content .new .text span {
+  color: peru;
+}
+
+/* Education Styling */
+.education .title::after {
+  content: "TU Dublin - Tallaght Campus";
+  font-size: 24px;
+}
+.education .gpa {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+/* Projects styling */
+.projects .title::after {
+  content: "My Projects";
+  font-size: 24px;
+}
+.projects .projects-content .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.projects .projects-content a {
+  display: inline-block;
+  background: peru;
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px peru;
+  transition: 0.5s;
+}
+.projects .projects-content a:hover {
+  color: black;
+  background: peru;
+}
+
+/* Experience */
+.experience .title::after {
+  content: "My Work Placements";
+  font-size: 24px;
+}
+
+/* Carousel */
+.carousel .card {
+  background: #393939;
+  border-radius: 10px;
+  padding: 25px 35px 20px 25px;
+  text-align: center;
+  overflow: hidden;
+  transition: 1s;
+}
+.carousel .card:hover {
+  background: peru;
+}
+.carousel .card .box {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+.carousel .card .text {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 20px 25px;
+}
+.carousel .card img {
+  height: 175px;
+  width: 175px;
+  border-radius: 50%;
+}
+.carousel .card:hover img {
+  border-color: white;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 25px;
+}
+.owl-dot {
+  height: 15px;
+  width: 15px;
+  margin: 15px;
+  border-radius: 50%;
+  border: 3px solid peru !important;
+  transition: 0.5s;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: peru !important;
+}
+
+/* Skills */
+.skills .title::after {
+  content: "My Skills";
+  font-size: 24px;
+}
+.skills .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.skills .text .table {
+  width: 105%;
+  align-items: center;
+}
+
+/* Hobbies & Interests */
+.hobbies .title::after {
+  content: "My Hobbies & Interests";
+  font-size: 24px;
+}
+
+.hobbies .hobbies-content p {
+  text-align: center;
+}
+
+/* Contact */
+.contact .title::after {
+  content: "My Contact Details";
+  font-size: 24px;
+}
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+.contact .contact-content .text {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: black;
+}
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contact .right form .textarea {
+  height: 70px;
+  width: 100%;
+}
+.contact .right form .name {
+  margin-right: 15px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  transition: 0.5s;
+}
+.contact .right form .textarea textarea {
+  padding-top: 15px;
+}
+.contact .right form .button-area {
+  display: flex;
+  align-items: center;
+}
+.right form .button-area button {
+  color: white;
+  display: block;
+  width: 150px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: peru;
+  border: peru;
+  transition: 0.5s;
+}
+.right form .button-area button:hover {
+  color: black;
+  background: peru;
+}
+input:focus,
+textarea:focus {
+  background-color: lightyellow;
+}
+
+/* Footer */
+footer {
+  background: black;
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+footer span a {
+  color: peru;
+}
+footer span a:hover {
+  color: white;
+}
+
+/* Windowed Content Scaling */
+@media (max-width: 1300px) {
+  .menu-btn {
+    display: block;
+    z-index: 0;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 100%;
+    top: 8.5%;
+    background: black;
+    text-align: center;
+    padding-top: 100px;
+    transition: 0.5s;
+  }
+  .navbar .menu:hover,
+  .menu.active:hover,
+  .menu-btn:hover {
+    color: peru;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 12px;
+    font-size: 25px;
+  }
+  .home .home-content .text-1 {
+    font-size: 45px;
+  }
+  .home .home-content .text-2 {
+    font-size: 65px;
+    font-weight: 700;
+  }
+  .home .home-content .text-3 {
+    font-size: 40px;
+  }
+  .home .home-content a {
+    font-size: 26px;
+    padding: 15px 30px;
+  }
+  .about .about-content .column {
+    width: 100%;
+  }
+  .about .about-content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+  .education .education-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 22px;
+  }
+  .skills .skills-content .column,
+  .contact .contact-content .column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+/* Phone Content Scaling */
+@media (max-width: 600px) {
+  .max-width {
+    padding: 0 24px;
+  }
+  .home .home-content .text-1 {
+    font-size: 40px;
+  }
+  .home .home-content .text-2 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+  .home .home-content a {
+    font-size: 20px;
+  }
+  .education .education-content .card {
+    width: 100%;
+  }
+}
